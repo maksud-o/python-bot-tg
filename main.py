@@ -15,7 +15,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.forward_message(chat_id=id, from_chat_id=id, message_id=update.message.id)
 
 if __name__ == '__main__':
-    application = ApplicationBuilder().token('7978686999:AAHocDkasynysqkfgueNY8eAMrwX0UA9w04').build()
+    application = ApplicationBuilder().token('TOKEN').build()
 
     start_handler = CommandHandler('start', start)
     echo_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), echo)
